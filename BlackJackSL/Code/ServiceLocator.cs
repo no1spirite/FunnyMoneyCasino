@@ -2,8 +2,9 @@
 {
     using BlackJackSL.ViewModels;
     using BlackJackSL.Views;
-
+    
     using Ninject;
+    using Ninject.Core;
 
     public class ServiceLocator
     {

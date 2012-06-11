@@ -1,34 +1,36 @@
-﻿namespace BlackJackSL.Code
+﻿using BlackJackSL.Model;
+using BlackJackSL.ViewModels;
+using BlackJackSL.Views;
+using Ninject.Core;
+using Ninject.Core.Behavior;
+
+namespace BlackJackSL.Code
 {
-    using BlackJackSL.ViewModels;
-    using BlackJackSL.Views;
-
-    using Ninject.Modules;
-
-    internal class Module : NinjectModule
+    class Module : StandardModule
     {
         public override void Load()
         {
-            this.Bind<TableView>().ToSelf().InSingletonScope();
-            this.Bind<TableViewModel>().ToSelf().InSingletonScope();
+            Bind<TableView>().ToSelf().Using<SingletonBehavior>();
+            Bind<TableViewModel>().ToSelf().Using<SingletonBehavior>();
 
-            this.Bind<ChatView>().ToSelf().InSingletonScope();
-            this.Bind<ChatViewModel>().ToSelf().InSingletonScope();
+            Bind<ChatView>().ToSelf().Using<SingletonBehavior>();
+            Bind<ChatViewModel>().ToSelf().Using<SingletonBehavior>();
 
-            this.Bind<LoginView>().ToSelf().InSingletonScope();
-            this.Bind<LoginViewModel>().ToSelf().InSingletonScope();
+            Bind<LoginView>().ToSelf().Using<SingletonBehavior>();
+            Bind<LoginViewModel>().ToSelf().Using<SingletonBehavior>();
 
-            this.Bind<PlayerCollectionView>().ToSelf().InSingletonScope();
-            this.Bind<PlayerCollectionViewModel>().ToSelf().InSingletonScope();
+            Bind<PlayerCollectionView>().ToSelf().Using<SingletonBehavior>();
+            Bind<PlayerCollectionViewModel>().ToSelf().Using<SingletonBehavior>();
 
-            this.Bind<Shell>().ToSelf().InSingletonScope();
+            Bind<Shell>().ToSelf().Using<SingletonBehavior>();
 
-            this.Bind<DealerView>().ToSelf().InSingletonScope();
-            this.Bind<DealerViewModel>().ToSelf().InSingletonScope();
+            Bind<DealerView>().ToSelf().Using<SingletonBehavior>();
+            Bind<DealerViewModel>().ToSelf().Using<SingletonBehavior>();
 
-            this.Bind<ClientComms>().ToSelf().InSingletonScope();
+            Bind<ClientComms>().ToSelf().Using<SingletonBehavior>();
 
             //Bind<Deck>().ToSelf().Using<SingletonBehavior>();
+
         }
     }
 }
