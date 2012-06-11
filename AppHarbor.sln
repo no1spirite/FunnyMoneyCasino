@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyMoneyCasino", "FunnyMoneyCasino\FunnyMoneyCasino.csproj", "{2A2D3D0B-57F3-4967-AA93-576F8FAB82F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyMoneyCasino", "FunnyMoneyCasino\FunnyMoneyCasino.csproj"
 	ProjectSection(ProjectDependencies) = postProject
 		{E9245442-6048-4BB0-BBAC-2F46C071E022} = {E9245442-6048-4BB0-BBAC-2F46C071E022}
 		{8D0A03F1-9099-41EC-B9A5-F3A8DD770BF0} = {8D0A03F1-9099-41EC-B9A5-F3A8DD770BF0}
