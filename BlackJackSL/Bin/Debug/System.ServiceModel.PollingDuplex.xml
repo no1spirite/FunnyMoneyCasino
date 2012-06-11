@@ -5,7 +5,7 @@
   </assembly>
   <members>
     <member name="T:System.ServiceModel.PollingDuplexHttpBinding">
-      <summary>Represents a binding that a Silverlight 5 client can use to configure endpoints that can communicate with Windows Communication Foundation (WCF) services that are similarly configured for duplex communication with a polling client.</summary>
+      <summary>Represents a binding that a Silverlight version 4 Release Candidate client can use to configure endpoints that can communicate with Windows Communication Foundation (WCF) services that are similarly configured for duplex communication with a polling client.</summary>
     </member>
     <member name="M:System.ServiceModel.PollingDuplexHttpBinding.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.PollingDuplexHttpBinding" /> class.</summary>
@@ -89,7 +89,7 @@
       <summary>This mode provides only HTTP-based client authentication. It does not provide message integrity or confidentiality.</summary>
     </member>
     <member name="T:System.ServiceModel.Channels.PollingDuplexBindingElement">
-      <summary>Represents the binding element that enables duplex communication between a Silverlight 5 client and a service.</summary>
+      <summary>Represents the binding element that enables duplex communication between a Silverlight version 4 Release Candidate client and a service.</summary>
     </member>
     <member name="M:System.ServiceModel.Channels.PollingDuplexBindingElement.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Channels.PollingDuplexBindingElement" /> class.</summary>
@@ -141,11 +141,7 @@
       <summary>Gets or sets the maximum interval of time that can pass without activity on a channel before the client channel enters a faulted state.</summary>
       <returns>The <see cref="T:System.TimeSpan" /> object that specifies the maximum interval of time that can pass without activity on a channel before the client channel enters a faulted state.</returns>
     </member>
-    <member name="P:System.ServiceModel.Channels.PollingDuplexBindingElement.MaxPendingMessagesPerSession">
-      <summary>Gets or sets the maximum number of pending messages per session.</summary>
-      <returns>The maximum number of pending messages per session.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The value set is less than zero.</exception>
-    </member>
+    <member name="P:System.ServiceModel.Channels.PollingDuplexBindingElement.MaxPendingMessagesPerSession"></member>
     <member name="T:System.ServiceModel.Channels.PollingDuplexMode">
       <summary>Specifies the format of server responses to client polling when the communication is configured for duplex polling.</summary>
     </member>

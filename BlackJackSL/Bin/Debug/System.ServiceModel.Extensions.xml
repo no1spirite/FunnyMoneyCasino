@@ -121,7 +121,7 @@
       <exception cref="T:System.InvalidOperationException">The callback contract is null but the service endpoint requires one that is non-null.</exception>
     </member>
     <member name="T:System.ServiceModel.DuplexClientBase`1">
-      <summary>Provides the base implementation from which Silverlight 5 client objects can call duplex services.</summary>
+      <summary>Provides the base implementation from which Silverlight version 4 Release Candidate client objects can call duplex services.</summary>
       <typeparam name="TChannel">The type of the channel to be created.</typeparam>
     </member>
     <member name="M:System.ServiceModel.DuplexClientBase`1.#ctor(System.ServiceModel.InstanceContext)">

@@ -5,7 +5,7 @@
   </assembly>
   <members>
     <member name="T:System.ServiceModel.XmlSerializerFormatAttribute">
-      <summary>Instructs the Silverlight 5 infrastructure to use the <see cref="T:System.Xml.Serialization.XmlSerializer" /> instead of the <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> to serialize a method or class.</summary>
+      <summary>Instructs the Silverlight version 4 Release Candidate infrastructure to use the <see cref="T:System.Xml.Serialization.XmlSerializer" /> instead of the <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> to serialize a method or class.</summary>
     </member>
     <member name="M:System.ServiceModel.XmlSerializerFormatAttribute.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.XmlSerializerFormatAttribute" /> class. </summary>

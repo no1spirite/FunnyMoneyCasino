@@ -604,12 +604,12 @@
     <member name="M:System.Xml.Linq.XDocument.Load(System.String)">
       <summary>Creates a new <see cref="T:System.Xml.Linq.XDocument" /> from a file located in the application's XAP package.</summary>
       <returns>An <see cref="T:System.Xml.Linq.XDocument" /> that contains the contents of the specified file.</returns>
-      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XDocument" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML file from an Arbitrary URI Location with LINQ to XML.</param>
+      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XDocument" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML File from an Arbitrary URI Location with LINQ to XML.</param>
     </member>
     <member name="M:System.Xml.Linq.XDocument.Load(System.String,System.Xml.Linq.LoadOptions)">
       <summary>Creates a new <see cref="T:System.Xml.Linq.XDocument" /> from a file located in the application's XAP package, optionally preserving white space, setting the base URI, and retaining line information.</summary>
       <returns>An <see cref="T:System.Xml.Linq.XDocument" /> that contains the contents of the specified file.</returns>
-      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XDocument" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML file from an Arbitrary URI Location with LINQ to XML.</param>
+      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XDocument" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML File from an Arbitrary URI Location with LINQ to XML.</param>
       <param name="options">A <see cref="T:System.Xml.Linq.LoadOptions" /> that specifies how white space is handled and whether to load base URI and line information.</param>
     </member>
     <member name="M:System.Xml.Linq.XDocument.Load(System.Xml.XmlReader)">
@@ -830,12 +830,12 @@
     <member name="M:System.Xml.Linq.XElement.Load(System.String)">
       <summary>Loads an <see cref="T:System.Xml.Linq.XElement" /> from a file located in the applications' XAP package.</summary>
       <returns>An <see cref="T:System.Xml.Linq.XElement" /> that contains the contents of the specified file.</returns>
-      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XElement" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML file from an Arbitrary URI Location with LINQ to XML.</param>
+      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XElement" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML File from an Arbitrary URI Location with LINQ to XML.</param>
     </member>
     <member name="M:System.Xml.Linq.XElement.Load(System.String,System.Xml.Linq.LoadOptions)">
       <summary>Loads an <see cref="T:System.Xml.Linq.XElement" /> from a file located in the application's XAP package, optionally preserving white space, setting the base URI, and retaining line information.</summary>
       <returns>An <see cref="T:System.Xml.Linq.XElement" /> that contains the contents of the specified file.</returns>
-      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XElement" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML file from an Arbitrary URI Location with LINQ to XML.</param>
+      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XElement" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML File from an Arbitrary URI Location with LINQ to XML.</param>
       <param name="options">A <see cref="T:System.Xml.Linq.LoadOptions" /> that specifies white space behavior, and whether to load base URI and line information.</param>
     </member>
     <member name="M:System.Xml.Linq.XElement.Load(System.Xml.XmlReader)">

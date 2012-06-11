@@ -1,4 +1,4 @@
-﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="BlackJackSL" EntryPointType="BlackJackSL.App" RuntimeVersion="5.0.61118.0">
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="BlackJackSL" EntryPointType="BlackJackSL.App" RuntimeVersion="4.0.50826.0">
   <Deployment.Parts>
     <AssemblyPart x:Name="BlackJackSL" Source="BlackJackSL.dll" />
     <AssemblyPart x:Name="Ninject" Source="Ninject.dll" />
