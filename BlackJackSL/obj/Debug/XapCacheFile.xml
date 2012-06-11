@@ -1,0 +1,12 @@
+﻿<xapCache source="C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\BlackJackSL.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/06/2012 14:45:55">
+  <file source="C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\obj\Debug\BlackJackSL.dll" archivePath="BlackJackSL.dll" lastWriteTime="11/06/2012 14:45:54" />
+  <file source="C:\Dev\Personal\FunnyMoneyCasino\References\SilverLight\Ninject.dll" archivePath="Ninject.dll" lastWriteTime="11/06/2012 13:51:09" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ServiceModel.Extensions.dll" archivePath="System.ServiceModel.Extensions.dll" lastWriteTime="18/11/2011 16:40:20" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ServiceModel.PollingDuplex.dll" archivePath="System.ServiceModel.PollingDuplex.dll" lastWriteTime="18/11/2011 16:40:20" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.dll" archivePath="System.Windows.Controls.dll" lastWriteTime="18/11/2011 16:40:20" />
+  <file source="C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="16/02/2010 15:40:08" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Xml.Linq.dll" archivePath="System.Xml.Linq.dll" lastWriteTime="18/11/2011 16:40:20" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Xml.Serialization.dll" archivePath="System.Xml.Serialization.dll" lastWriteTime="18/11/2011 16:40:20" />
+  <file source="C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\ServiceReferences.ClientConfig" archivePath="ServiceReferences.ClientConfig" lastWriteTime="14/12/2009 15:23:04" />
+  <file source="C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="11/06/2012 14:36:49" />
+</xapCache>
