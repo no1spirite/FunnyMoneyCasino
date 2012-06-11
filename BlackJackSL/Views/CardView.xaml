@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="BlackJackSL.Views.CardView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Storyboard x:Name="CardFadeIn" >
+                <DoubleAnimation 
+                              Storyboard.TargetName="Card" 
+                              Storyboard.TargetProperty="Opacity"
+                              From="0.0" To="1.0" Duration="0:0:.2" />
+
+            </Storyboard>
+            <Storyboard x:Name="RotateCard">
+                <DoubleAnimation Storyboard.TargetName="SliderY" Storyboard.TargetProperty="Value" Duration="0:0:0.5" To="180"/>
+            </Storyboard>
+            <Storyboard x:Name="DelayedRotateCard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SliderY" Storyboard.TargetProperty="Value" Duration="0:0:0.7">
+                <LinearDoubleKeyFrame
+                        Value="0" KeyTime="0:0:0.2"/>
+                <LinearDoubleKeyFrame
+                        Value="180" KeyTime="0:0:0.7"/>
+            </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+                <Storyboard x:Name="CardMove">
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Card"
+                        Duration="0:0:0.7"
+                        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                        <LinearDoubleKeyFrame
+                        Value="50" KeyTime="0:0:0.3"/>
+                        <LinearDoubleKeyFrame
+                        Value="0" KeyTime="0:0:0.7"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+    </UserControl.Resources>
+    <Canvas>
+        <Canvas x:Name="CardEffectContainer" Height="80" Width="56">
+            <Canvas.Effect>
+                <DropShadowEffect Opacity="0.5" BlurRadius="8"/>
+            </Canvas.Effect>
+            <Canvas x:Name="Card" Height="80" Width="56" IsHitTestVisible="False">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Canvas.Projection>
+                    <PlaneProjection x:Name="CardRotation" RotationX="0" RotationY="0" RotationZ="0"/>
+                </Canvas.Projection>
+                <Image x:Name="CardFront" Height="80" Width="56" Source="{Binding Path=CardImage}" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="CardBack" Height="80" Width="56" Canvas.Left="0" Source="{Binding Path=CardBackImage}"/>
+            </Canvas>
+        </Canvas>
+        <Canvas x:Name="YRotationStuff" Height="37" Width="200" Canvas.Left="20" Canvas.Top="491" Opacity="0">
+            <Slider x:Name="SliderY" Width="200" Value="{Binding ElementName=CardRotation, Mode=TwoWay, Path=RotationY}" Minimum="0" Maximum="360" Canvas.Top="19"/>
+            <TextBlock x:Name="SliderYValue" Text="Y Rotation: 0.00" TextWrapping="Wrap" Foreground="#FFFFFFFF"/>
+        </Canvas>
+        <Canvas x:Name="XRotationStuff" Height="37" Width="200" Canvas.Left="20" Canvas.Top="441" Opacity="0">
+            <Slider x:Name="SliderX" Width="200" Value="{Binding ElementName=CardRotation, Mode=TwoWay, Path=RotationX}" Minimum="0" Maximum="360" Canvas.Top="19"/>
+            <TextBlock x:Name="SliderXValue" Text="X Rotation: 0.00" TextWrapping="Wrap" Foreground="#FFFFFFFF"/>
+        </Canvas>
+        <Canvas x:Name="ZRotationStuff" Height="37" Width="200" Canvas.Left="20" Canvas.Top="541" Opacity="0">
+            <Slider x:Name="SliderZ" Width="200" Value="{Binding ElementName=CardRotation, Mode=TwoWay, Path=RotationZ}" Minimum="0" Maximum="360" Canvas.Top="19"/>
+            <TextBlock x:Name="SliderZValue" Text="Z Rotation: 0.00" TextWrapping="Wrap" Foreground="#FFFFFFFF"/>
+        </Canvas>
+    </Canvas>
+</UserControl>

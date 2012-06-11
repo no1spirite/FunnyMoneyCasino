@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="BlackJackSL.Views.DealerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:BlackJackSL.Controls"
+    xmlns:View="clr-namespace:BlackJackSL.Views"
+    DataContext="{Binding Path=DealerViewModel, Source={StaticResource ServiceLocator}}"
+    Height="139" Width="216">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="handTemplate">
+                <View:CardView />
+                <!--<StackPanel>
+                    <Image Source="{Binding Path=CurrentImage}" Height="90" Name="Card"/>
+                </StackPanel>-->
+                
+                <!--<DataTemplate.Triggers>
+                    <DataTrigger Value="false" Binding="{Binding Path=IsVisible}" >
+                        <Setter TargetName="Card" Property="Source" Value="/Images/backside1.bmp" />
+                    </DataTrigger>
+                    <DataTrigger Value="true" Binding="{Binding Path=IsVisible}" >
+                        <Setter TargetName="Card" Property="Source" Value="{Binding Path=CardImage}" />
+                    </DataTrigger>
+                </DataTemplate.Triggers>-->
+            </DataTemplate>
+        </Grid.Resources>
+        <Canvas Height="130" VerticalAlignment="Top">
+            <TextBlock VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="14" Foreground="White"
+                               Text="{Binding Path=DealerHandTotal}"
+                               Canvas.Left="90"
+                               Canvas.Top="90">
+            </TextBlock>
+            <Controls:CardItemsControl Height="90"
+                      ItemsSource="{Binding Path=Hand}"
+                      ItemTemplate="{StaticResource handTemplate}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="148" Canvas.Left="60" Canvas.Top="0">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas>
+                            <Canvas.Effect>
+                                <DropShadowEffect x:Name="HandDropShadow" BlurRadius="20" Color="Black" Direction="-45" Opacity="0.8" ShadowDepth="10" />
+                            </Canvas.Effect>
+                        </Canvas>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </Controls:CardItemsControl>
+        </Canvas>
+    </Grid>
+</UserControl>

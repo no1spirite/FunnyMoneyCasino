@@ -1,0 +1,6 @@
+﻿<%@ServiceHost 
+    language="C#"
+    Debug="true" 
+    Service="BlackJackSL.Web.BlackJack.JSON.JSONService"
+    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"
+ %>

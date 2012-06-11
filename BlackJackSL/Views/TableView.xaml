@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="BlackJackSL.Views.TableView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:View="clr-namespace:BlackJackSL.Views"
+    xmlns:Input="clr-namespace:BlackJackSL.SLExtensions.Input"
+    DataContext="{Binding Path=TableViewModel, Source={StaticResource ServiceLocator}}"
+    Height="550" Width="885">
+    
+    <Canvas Loaded="Canvas_Loaded">
+        <Canvas.Resources>
+            <ResourceDictionary Source="../Resources/TableResources.xaml" />
+        </Canvas.Resources>
+        <Canvas Background="Transparent" Margin="0,425,0,0" VerticalAlignment="Bottom">
+            <Button MouseEnter="Button_MouseEnter" Width="60" Height="60" Margin="5" Canvas.Left="10" Canvas.Top="-72" 
+					Input:CommandService.Command="Bet10Command" IsEnabled="{Binding Path=CanBet10}" Style="{StaticResource Chip10Button}">
+                <Image x:Name="Bet10Image" Source="/BlackJackSL;component/Images/Buttons/Chip10.png"/>
+            </Button>
+            <Button Width="60" Height="60" Margin="5" Canvas.Left="65" Canvas.Top="-40" 
+                    Input:CommandService.Command="Bet20Command" IsEnabled="{Binding Path=CanBet20}" Style="{StaticResource Chip20Button}">
+                <Image Source="/BlackJackSL;component/Images/Buttons/Chip20.png"/>
+            </Button>
+            <Button Width="60" Height="60" Margin="5" Canvas.Left="125" Canvas.Top="-14"
+                    Input:CommandService.Command="Bet50Command" IsEnabled="{Binding Path=CanBet50}" Style="{StaticResource Chip50Button}">
+                <Image Source="/BlackJackSL;component/Images/Buttons/Chip50.png" />
+            </Button>
+            <Button Width="60" Height="60" Margin="5" Canvas.Left="185" Canvas.Top="9"
+                    Input:CommandService.Command="Bet100Command" IsEnabled="{Binding Path=CanBet100}" Style="{StaticResource Chip100Button}">
+                <Image Source="/BlackJackSL;component/Images/Buttons/Chip100.png"/>
+            </Button>
+            <!--<Button Width="60" Height="60" Margin="5" Canvas.Left="260" Canvas.Top="35"
+                    Input:CommandService.Command="DoneBettingCommand" IsEnabled="{Binding Path=CanDoneBetting}" Style="{StaticResource ChipDoneBettingButton}">
+                
+            </Button>-->
+            <Button Name="doneBetting"
+                    IsEnabled="{Binding Path=CanDoneBetting}"
+                    Input:CommandService.Command="DoneBettingCommand"
+                    Style="{StaticResource GlassButton}"
+                    Width="60"
+                    Height="60"
+                    Foreground="White" 
+                    Canvas.Left="260" 
+                    Canvas.Top="35" >
+                <Image Source="/BlackJackSL;component/Images/Buttons/DoneBettingImage.png" Width="55"/>
+            </Button>
+        </Canvas>
+        <Canvas Height="50" Name="canvas1" VerticalAlignment="Bottom" Background="White" Canvas.Left="630" Canvas.Top="420">
+            <Button Name="standButton"
+                    IsEnabled="{Binding Path=CanStand}"
+                    Input:CommandService.Command="StandCommand"
+                    Style="{StaticResource GlassButton}"
+                    Width="60"
+                    Height="60"
+                    Foreground="White" 
+                    Canvas.Left="0" 
+                    Canvas.Top="25" >
+                <Image Source="/BlackJackSL;component/Images/Buttons/StandHandImage.png" Width="55"/>
+            </Button>
+            <Button Name="hitButton"
+                    IsEnabled="{Binding Path=CanHit}"
+                    Input:CommandService.Command="HitCommand"
+                    Style="{StaticResource GlassButton}"
+                    Width="60"
+                    Height="60"
+                    Foreground="White" 
+                    Canvas.Left="60" 
+                    Canvas.Top="4" >
+                <Image Source="/BlackJackSL;component/Images/Buttons/HitHandImage.png" Width="55"/>
+            </Button>
+            <Button Name="doubleButton"
+                    IsEnabled="{Binding Path=CanDouble}"
+                    Input:CommandService.Command="DoubleCommand"
+                    Style="{StaticResource GlassButton}"
+                    Width="60"
+                    Height="60"
+                    Foreground="White" 
+                    Canvas.Left="120" 
+                    Canvas.Top="-25" >
+                <Image Source="/BlackJackSL;component/Images/Buttons/DoubleHandImage.png" Width="55"/>
+            </Button>
+            <Button Name="splitButton"
+                    IsEnabled="{Binding Path=CanSplit}"
+                    Input:CommandService.Command="SplitCommand"
+                    Style="{StaticResource GlassButton}"
+                    Width="60"
+                    Height="60"
+                    Foreground="White" 
+                    Canvas.Left="180" 
+                    Canvas.Top="-58" >
+                <Image Source="/BlackJackSL;component/Images/Buttons/SplitHandImage.png" Width="55"/>
+            </Button>
+            
+        </Canvas>
+        <TextBlock Canvas.Left="0" Canvas.Top="490" Height="82" Name="textBlock2" Width="226" FontSize="40" Text="{Binding Path=OverallPlayerBankString}" >
+        </TextBlock>
+        <TextBlock Height="166" HorizontalAlignment="Left" Margin="11,10,0,0" Name="textBlock1" VerticalAlignment="Top" Width="226" Text="{Binding Path=Info}">
+        </TextBlock>
+        <!--<ListBox ItemsSource="{Binding Path=Deck}" HorizontalAlignment="Left" Width="182" Height="180" VerticalAlignment="Top" Margin="42,27,0,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Path=CardImage}" Height="20"/>
+                        <TextBlock Text="{Binding Path=Suit}"/>
+                        <TextBlock Text="{Binding Path=Rank}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>-->
+        <View:DealerView Margin="350,27,0,0" VerticalAlignment="Top" />
+        <View:PlayerCollectionView Margin="0,70,0,135"/>
+        
+    </Canvas>
+</UserControl>

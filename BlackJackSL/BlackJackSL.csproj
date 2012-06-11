@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D0A03F1-9099-41EC-B9A5-F3A8DD770BF0}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlackJackSL</RootNamespace>
+    <AssemblyName>BlackJackSL</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>BlackJackSL.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>BlackJackSL.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <ExpressionBlendVersion>3.0.1927.0</ExpressionBlendVersion>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="Ninject.Core, Version=1.0.0.82, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\SilverLight\Ninject.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.PollingDuplex, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClasses\ViewModelBase.cs" />
+    <Compile Include="Behaviours\UnloadedBehavior.cs" />
+    <Compile Include="Code\AsyncObservableCollection.cs" />
+    <Compile Include="Code\ClientComms.cs" />
+    <Compile Include="Code\Module.cs" />
+    <Compile Include="Code\ServiceLocator.cs" />
+    <Compile Include="Code\UIThread.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Controls\CardImageControl.cs" />
+    <Compile Include="Controls\CardItemsControl.cs" />
+    <Compile Include="Controls\ChipItemsControl.cs" />
+    <Compile Include="Controls\HandItemsControl.cs" />
+    <Compile Include="Controls\PlayerItemsControl.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Behaviours\TextBoxEnterButtonInvokeBehaviour.cs" />
+    <Compile Include="Model\Chat.cs" />
+    <Compile Include="Model\Deck.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BlackJackService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ChatService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SLExtensions\Input\CanExecuteEventArgs.cs" />
+    <Compile Include="SLExtensions\Input\Command.cs" />
+    <Compile Include="SLExtensions\Input\CommandService.cs" />
+    <Compile Include="SLExtensions\Input\CommandSubscription.cs" />
+    <Compile Include="SLExtensions\Input\ExecutedEventArgs.cs" />
+    <Compile Include="SLExtensions\Input\MouseEnterCommand.cs" />
+    <Compile Include="SLExtensions\Input\MouseEnterCommandSubscription.cs" />
+    <Compile Include="SLExtensions\Input\MouseLeaveCommand.cs" />
+    <Compile Include="SLExtensions\Input\MouseLeaveCommandSubscription.cs" />
+    <Compile Include="SLExtensions\Input\MouseLeftButtonUpCommand.cs" />
+    <Compile Include="SLExtensions\Input\MouseLeftButtonUpCommandSubscription.cs" />
+    <Compile Include="SLExtensions\Input\StateEventArgs.cs" />
+    <Compile Include="TestFiles\TestControl1.xaml.cs">
+      <DependentUpon>TestControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CardViewModel.cs" />
+    <Compile Include="ViewModels\ChatViewModel.cs" />
+    <Compile Include="ViewModels\ChipViewModel.cs" />
+    <Compile Include="ViewModels\DealerViewModel.cs" />
+    <Compile Include="ViewModels\HandViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\PlayerCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PlayerViewModel.cs" />
+    <Compile Include="ViewModels\TableViewModel.cs" />
+    <Compile Include="Views\CardView.xaml.cs">
+      <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChatView.xaml.cs">
+      <DependentUpon>ChatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChipView.xaml.cs">
+      <DependentUpon>ChipView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DealerView.xaml.cs">
+      <DependentUpon>DealerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HandView.xaml.cs">
+      <DependentUpon>HandView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerCollectionView.xaml.cs">
+      <DependentUpon>PlayerCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerView.xaml.cs">
+      <DependentUpon>PlayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TableView.xaml.cs">
+      <DependentUpon>TableView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Shell.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CardView.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChipView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DealerView.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HandView.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PlayerCollectionView.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PlayerView.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TableView.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\BlackJackService\BlackJackSL.Web.BlackJack.Objects.xsd" />
+    <None Include="Service References\BlackJackService\BlackJackSL.Web.BlackJack.xsd" />
+    <None Include="Service References\BlackJackService\duplex.xsd" />
+    <None Include="Service References\BlackJackService\service.wsdl" />
+    <None Include="Service References\BlackJackService\service.xsd" />
+    <None Include="Service References\BlackJackService\service1.xsd" />
+    <None Include="Service References\BlackJackService\configuration91.svcinfo" />
+    <None Include="Service References\BlackJackService\configuration.svcinfo" />
+    <None Include="Service References\BlackJackService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ChatService\BlackJackSL.Web.Chat.xsd" />
+    <None Include="Service References\ChatService\duplex.xsd" />
+    <None Include="Service References\ChatService\service.wsdl" />
+    <None Include="Service References\ChatService\service.xsd" />
+    <None Include="Service References\ChatService\service1.xsd" />
+    <None Include="Service References\ChatService\configuration91.svcinfo" />
+    <None Include="Service References\ChatService\configuration.svcinfo" />
+    <None Include="Service References\ChatService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\backside1.png" />
+    <Resource Include="Images\Chip1003d.png" />
+    <Resource Include="Images\Chip103d.png" />
+    <Resource Include="Images\Chip203d.png" />
+    <Resource Include="Images\Chip503d.png" />
+    <Resource Include="Images\clubace.png" />
+    <Resource Include="Images\clubeight.png" />
+    <Resource Include="Images\clubfive.png" />
+    <Resource Include="Images\clubfour.png" />
+    <Resource Include="Images\clubjack.png" />
+    <Resource Include="Images\clubking.png" />
+    <Resource Include="Images\clubnine.png" />
+    <Resource Include="Images\clubqueen.png" />
+    <Resource Include="Images\clubseven.png" />
+    <Resource Include="Images\clubsix.png" />
+    <Resource Include="Images\clubten.png" />
+    <Resource Include="Images\clubthree.png" />
+    <Resource Include="Images\clubtwo.png" />
+    <Resource Include="Images\diamondace.png" />
+    <Resource Include="Images\diamondeight.png" />
+    <Resource Include="Images\diamondfive.png" />
+    <Resource Include="Images\diamondfour.png" />
+    <Resource Include="Images\diamondjack.png" />
+    <Resource Include="Images\diamondking.png" />
+    <Resource Include="Images\diamondnine.png" />
+    <Resource Include="Images\diamondqueen.png" />
+    <Resource Include="Images\diamondseven.png" />
+    <Resource Include="Images\diamondsix.png" />
+    <Resource Include="Images\diamondten.png" />
+    <Resource Include="Images\diamondthree.png" />
+    <Resource Include="Images\diamondtwo.png" />
+    <Resource Include="Images\heartace.png" />
+    <Resource Include="Images\hearteight.png" />
+    <Resource Include="Images\heartfive.png" />
+    <Resource Include="Images\heartfour.png" />
+    <Resource Include="Images\heartjack.png" />
+    <Resource Include="Images\heartking.png" />
+    <Resource Include="Images\heartnine.png" />
+    <Resource Include="Images\heartqueen.png" />
+    <Resource Include="Images\heartseven.png" />
+    <Resource Include="Images\heartsix.png" />
+    <Resource Include="Images\heartten.png" />
+    <Resource Include="Images\heartthree.png" />
+    <Resource Include="Images\hearttwo.png" />
+    <Resource Include="Images\spadeace.png" />
+    <Resource Include="Images\spadeeight.png" />
+    <Resource Include="Images\spadefive.png" />
+    <Resource Include="Images\spadefour.png" />
+    <Resource Include="Images\spadejack.png" />
+    <Resource Include="Images\spadeking.png" />
+    <Resource Include="Images\spadenine.png" />
+    <Resource Include="Images\spadequeen.png" />
+    <Resource Include="Images\spadeseven.png" />
+    <Resource Include="Images\spadesix.png" />
+    <Resource Include="Images\spadeten.png" />
+    <Resource Include="Images\spadethree.png" />
+    <Resource Include="Images\spadetwo.png" />
+    <Resource Include="Images\Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\Chip10.png" />
+    <Resource Include="Images\Buttons\Chip100.png" />
+    <Resource Include="Images\Buttons\Chip20.png" />
+    <Resource Include="Images\Buttons\Chip50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\betchip.mp3" />
+    <Resource Include="Sounds\winchips.mp3" />
+    <Resource Include="Sounds\dealcard.mp3" />
+    <Resource Include="Sounds\flipcard.mp3" />
+    <Resource Include="Sounds\shuffledeck.mp3" />
+    <Resource Include="Sounds\losechips.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\TableResources.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\PlayerCollectionResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\PlayerResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFiles\TestControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\Minus.png" />
+    <Resource Include="Images\Buttons\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\StandHand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\HitHand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\HitHandImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\StandHandImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\DoubleHandImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\SplitHandImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chip103dhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chip203dhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chip1003dhover.png" />
+    <Resource Include="Images\Chip503dhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buttons\DoneBettingImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ChipDoneBetting.png" />
+    <Resource Include="Images\ChipDoneBettinghover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Player1PlaceHolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Player2PlaceHolder.png" />
+    <Resource Include="Images\Player3PlaceHolder.png" />
+    <Resource Include="Images\Player4PlaceHolder.png" />
+    <Resource Include="Images\Player5PlaceHolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chip1003dsmall.png" />
+    <Resource Include="Images\Chip103dsmall.png" />
+    <Resource Include="Images\Chip203dsmall.png" />
+    <Resource Include="Images\Chip503dsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BlackJackService\" />
+    <WCFMetadataStorage Include="Service References\ChatService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

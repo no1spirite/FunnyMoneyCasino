@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack.Objects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack.Objects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCardViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CardViewModel" nillable="true" type="tns:CardViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCardViewModel" nillable="true" type="tns:ArrayOfCardViewModel" />
+  <xs:complexType name="CardViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardBackImage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardDealt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CardImage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardOpacity" type="xs:int" />
+      <xs:element minOccurs="0" name="CardRotationY" type="xs:int" />
+      <xs:element minOccurs="0" name="CardValue" type="xs:int" />
+      <xs:element minOccurs="0" name="CardXPos" type="xs:int" />
+      <xs:element minOccurs="0" name="CardYPos" type="xs:int" />
+      <xs:element minOccurs="0" name="CardZPos" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentImage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsVisible" type="xs:int" />
+      <xs:element minOccurs="0" name="Rank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardViewModel" nillable="true" type="tns:CardViewModel" />
+</xs:schema>

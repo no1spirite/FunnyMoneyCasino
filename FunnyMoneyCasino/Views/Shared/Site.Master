@@ -1,0 +1,75 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+      <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    </asp:ContentPlaceHolder>
+    <title><%= Html.Encode(ViewData["Title"]) %></title>
+    <%--<script src="../../Scripts/jquery-1.2.6.js"></script>--%>
+    <link href="../../Content/Style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="page">
+        <div id="pageHeader">
+            <ul class="menu">
+<%--                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="">Sign In</a></li>--%>
+            </ul>
+            <div class="logo">
+            
+            </div>
+        </div>
+        <div id="navigation">
+            <ul class="menu">
+            <li><%= Html.ActionLink("HOME", "Index", "Home")%></li>
+            <li><%= Html.ActionLink("ABOUT US", "About", "Home")%></li>
+            <li><%= Html.ActionLink("BLACKJACK", "BlackJack", "Games")%></li>
+            <li><%= Html.ActionLink("POKER", "Poker", "Games")%></li>
+            <li><%= Html.ActionLink("ROULETTE", "Roulette", "Games")%></li>
+            </ul>
+        </div>
+        <div id="pageContent">
+            <div class="b">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </div>
+        
+        <div class="pageContentFooter"></div>
+        <div class="block margin_t_10">
+            <div class="h"></div>
+            <div class="b">
+                <div class="newsletter margin_l_10">
+                    <img src="../../Content/images/Silverlight.png" width="200px"/>
+                </div>
+                <div class="line"></div>
+                <div class="fLeft w180 margin_l_10">
+                    <div class="cGray bold">Games</div>
+                    <ul class="list">
+                        <li><%= Html.ActionLink("BlackJack", "BlackJack", "Games")%></li>
+                        <li><%= Html.ActionLink("Poker", "Poker", "Games")%></li>
+                        <li><%= Html.ActionLink("Roulette", "Roulette", "Games")%></li>
+                    </ul>
+                </div>
+                <div class="fLeft w180">
+                    <div class="cGray bold">Customer Service</div>
+                    <ul class="list">
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f"></div>
+        </div>
+        <div id="pageFooter">
+            © 2009 Funny Money Casino. All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>

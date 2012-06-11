@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head></head>
+<body>
+<h1>AJAX WCF Sample</h1>
+<form name="input">
+    Name: <input type="text" name="name" onclick="sayHello();" />
+    <div id="msg"></div>
+</form>
+
+<script type="text/javascript">
+function sayHello()
+{
+    var xmlHttp;
+    try 
+    {
+        xmlHttp = new XMLHttpRequest();
+    }
+    catch (e)
+    {
+        try 
+        {
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+        catch (e)
+        {
+            try 
+            {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch (e) 
+            {
+                var msg = "This sample only works";
+                msg = msg + "in browsers with AJAX support.";
+                alert(msg);
+                
+                return false;
+            }
+        }
+    }
+    
+    xmlHttp.onreadystatechange = function()
+    {
+        if (xmlHttp.readyState == 4)
+        {
+            var mdiv = document.getElementById("msg");
+            mdiv.innerHTML = (xmlHttp.responseText);
+        }
+    }
+
+    var url = "BlackJackService.svc/";
+    url = url + "SayHello?name=";
+    url = url + document.input.name.value;
+
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send('');
+}
+</script>
+</body>
+</html>
