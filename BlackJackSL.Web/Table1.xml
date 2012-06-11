@@ -1,9 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Table>
   <Players>
+    <Player PlayerId="3" PlayerName="hjgfhj" PlayerInPlay="true" PlayerActive="true">
+      <Hands>
+        <Hand HandId="1" HandInPlay="true" HandActive="true">
+          <Cards>
+            <Card CardRank="Two" CardSuit="Spade" CardValue="2" />
+            <Card CardRank="Jack" CardSuit="Diamond" CardValue="10" />
+          </Cards>
+          <Chips>
+            <Chip ChipAmount="100" />
+            <Chip ChipAmount="100" />
+          </Chips>
+        </Hand>
+      </Hands>
+    </Player>
   </Players>
   <Dealer>
     <DealerCards>
+      <Card CardRank="King" CardSuit="Spade" CardValue="10" />
+      <Card CardRank="Ace" CardSuit="Diamond" CardValue="11" />
     </DealerCards>
   </Dealer>
 </Table>

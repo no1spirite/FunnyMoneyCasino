@@ -20,3 +20,4 @@ C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL.Web\bin\BlackJackSL.Web.pdb
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL.Web\obj\Debug\ResolveAssemblyReference.cache
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL.Web\obj\Debug\BlackJackSL.Web.dll
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL.Web\obj\Debug\BlackJackSL.Web.pdb
+C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL.Web\bin\System.ServiceModel.PollingDuplex.dll

@@ -1,33 +1,33 @@
 ﻿using BlackJackSL.Model;
 using BlackJackSL.ViewModels;
 using BlackJackSL.Views;
-using Ninject.Core;
-using Ninject.Core.Behavior;
 
 namespace BlackJackSL.Code
 {
-    class Module : StandardModule
+    using Ninject.Modules;
+
+    class Module : NinjectModule
     {
         public override void Load()
         {
-            Bind<TableView>().ToSelf().Using<SingletonBehavior>();
-            Bind<TableViewModel>().ToSelf().Using<SingletonBehavior>();
+            Bind<TableView>().ToSelf().InSingletonScope();
+            Bind<TableViewModel>().ToSelf().InSingletonScope();
 
-            Bind<ChatView>().ToSelf().Using<SingletonBehavior>();
-            Bind<ChatViewModel>().ToSelf().Using<SingletonBehavior>();
+            Bind<ChatView>().ToSelf().InSingletonScope();
+            Bind<ChatViewModel>().ToSelf().InSingletonScope();
 
-            Bind<LoginView>().ToSelf().Using<SingletonBehavior>();
-            Bind<LoginViewModel>().ToSelf().Using<SingletonBehavior>();
+            Bind<LoginView>().ToSelf().InSingletonScope();
+            Bind<LoginViewModel>().ToSelf().InSingletonScope();
 
-            Bind<PlayerCollectionView>().ToSelf().Using<SingletonBehavior>();
-            Bind<PlayerCollectionViewModel>().ToSelf().Using<SingletonBehavior>();
+            Bind<PlayerCollectionView>().ToSelf().InSingletonScope();
+            Bind<PlayerCollectionViewModel>().ToSelf().InSingletonScope();
 
-            Bind<Shell>().ToSelf().Using<SingletonBehavior>();
+            Bind<Shell>().ToSelf().InSingletonScope();
 
-            Bind<DealerView>().ToSelf().Using<SingletonBehavior>();
-            Bind<DealerViewModel>().ToSelf().Using<SingletonBehavior>();
+            Bind<DealerView>().ToSelf().InSingletonScope();
+            Bind<DealerViewModel>().ToSelf().InSingletonScope();
 
-            Bind<ClientComms>().ToSelf().Using<SingletonBehavior>();
+            Bind<ClientComms>().ToSelf().InSingletonScope();
 
             //Bind<Deck>().ToSelf().Using<SingletonBehavior>();
 
