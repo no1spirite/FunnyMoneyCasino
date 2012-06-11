@@ -23,7 +23,7 @@ namespace FunnyMoneyCasino.Tests.Controllers
 
             // Assert
             ViewDataDictionary viewData = result.ViewData;
-            Assert.AreEqual("Welcome to ASP.NET MVC!", viewData["Message"]);
+            Assert.AreEqual("Welcome to Funny Money Casino", viewData["Message"]);
         }
 
         [TestMethod]
