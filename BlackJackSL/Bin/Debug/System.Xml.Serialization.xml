@@ -5,7 +5,7 @@
   </assembly>
   <members>
     <member name="T:System.ServiceModel.XmlSerializerFormatAttribute">
-      <summary>Instructs the Silverlight version 3 infrastructure to use the <see cref="T:System.Xml.Serialization.XmlSerializer" /> instead of the <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> to serialize a method or class.</summary>
+      <summary>Instructs the Silverlight 5 infrastructure to use the <see cref="T:System.Xml.Serialization.XmlSerializer" /> instead of the <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> to serialize a method or class.</summary>
     </member>
     <member name="M:System.ServiceModel.XmlSerializerFormatAttribute.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.XmlSerializerFormatAttribute" /> class. </summary>
@@ -17,6 +17,32 @@
     <member name="P:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults">
       <summary>Gets or sets a value that indicates whether faults are supported.</summary>
       <returns>true if faults are supported; otherwise, false.</returns>
+    </member>
+    <member name="T:System.ServiceModel.Description.XmlSerializerOperationBehavior">
+      <summary>Controls run-time behavior of the <see cref="T:System.Xml.Serialization.XmlSerializer" /> associated with an operation.</summary>
+    </member>
+    <member name="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#AddBindingParameters(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Channels.BindingParameterCollection)">
+      <summary>When implemented in a derived class, adds a set of parameters to an operation description.</summary>
+      <param name="description">The target <see cref="T:System.ServiceModel.Description.OperationDescription" />.</param>
+      <param name="parameters">A <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> that contains the parameters.</param>
+    </member>
+    <member name="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#ApplyClientBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.ClientOperation)">
+      <summary>Applies a client's behavior to the operation.</summary>
+      <param name="description">A <see cref="T:System.ServiceModel.Description.OperationDescription" /> that represents the operation.</param>
+      <param name="proxy">A <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" /> that represents a client operation.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="description" /> or <paramref name="proxy" /> is null.</exception>
+    </member>
+    <member name="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.DispatchOperation)">
+      <summary>Applies a dispatch behavior to the operation.</summary>
+      <param name="description">The target <see cref="T:System.ServiceModel.Description.OperationDescription" />.</param>
+      <param name="dispatch">The <see cref="T:System.ServiceModel.Dispatcher.DispatchOperation" /> to apply.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="description" /> or <paramref name="dispatch" /> is null.</exception>
+    </member>
+    <member name="M:System.ServiceModel.Description.XmlSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#Validate(System.ServiceModel.Description.OperationDescription)">
+      <summary>When implemented in a derived class, validates the operation.</summary>
+      <param name="description">The target <see cref="T:System.ServiceModel.Description.OperationDescription" /> to validate.</param>
     </member>
     <member name="T:System.Xml.Serialization.XmlAnyElementAttributes">
       <summary>Represents a collection of <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> objects.</summary>
@@ -928,8 +954,8 @@ A long value that consists of the enumeration value as a series of bitwise OR op
       <param name="qnames">A comma-delimited list of XML qualified names.</param>
     </member>
     <member name="T:System.Xml.Serialization.XmlSerializationWriteCallback">
-      <summary>Delegate that is used by the <see cref="T:System.Xml.Serialization.XmlSerializer" /> class for serialization of types from SOAP-encoded, non-root XML data. </summary>
-      <param name="o"></param>
+      <summary>Delegate supporting the .NET Framework infrastructure that is used by the <see cref="T:System.Xml.Serialization.XmlSerializer" /> class for serialization of types from SOAP-encoded, non-root XML data. </summary>
+      <param name="o">The object being serialized.</param>
     </member>
     <member name="T:System.Xml.Serialization.XmlSerializationWriter">
       <summary>Abstract class used for controlling serialization by the <see cref="T:System.Xml.Serialization.XmlSerializer" /> class. </summary>

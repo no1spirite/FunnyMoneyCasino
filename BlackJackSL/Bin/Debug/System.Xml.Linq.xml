@@ -604,12 +604,12 @@
     <member name="M:System.Xml.Linq.XDocument.Load(System.String)">
       <summary>Creates a new <see cref="T:System.Xml.Linq.XDocument" /> from a file located in the application's XAP package.</summary>
       <returns>An <see cref="T:System.Xml.Linq.XDocument" /> that contains the contents of the specified file.</returns>
-      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XDocument" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML File from an Arbitrary URI Location with LINQ to XML.</param>
+      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XDocument" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML file from an Arbitrary URI Location with LINQ to XML.</param>
     </member>
     <member name="M:System.Xml.Linq.XDocument.Load(System.String,System.Xml.Linq.LoadOptions)">
       <summary>Creates a new <see cref="T:System.Xml.Linq.XDocument" /> from a file located in the application's XAP package, optionally preserving white space, setting the base URI, and retaining line information.</summary>
       <returns>An <see cref="T:System.Xml.Linq.XDocument" /> that contains the contents of the specified file.</returns>
-      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XDocument" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML File from an Arbitrary URI Location with LINQ to XML.</param>
+      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XDocument" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML file from an Arbitrary URI Location with LINQ to XML.</param>
       <param name="options">A <see cref="T:System.Xml.Linq.LoadOptions" /> that specifies how white space is handled and whether to load base URI and line information.</param>
     </member>
     <member name="M:System.Xml.Linq.XDocument.Load(System.Xml.XmlReader)">
@@ -830,12 +830,12 @@
     <member name="M:System.Xml.Linq.XElement.Load(System.String)">
       <summary>Loads an <see cref="T:System.Xml.Linq.XElement" /> from a file located in the applications' XAP package.</summary>
       <returns>An <see cref="T:System.Xml.Linq.XElement" /> that contains the contents of the specified file.</returns>
-      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XElement" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML File from an Arbitrary URI Location with LINQ to XML.</param>
+      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XElement" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML file from an Arbitrary URI Location with LINQ to XML.</param>
     </member>
     <member name="M:System.Xml.Linq.XElement.Load(System.String,System.Xml.Linq.LoadOptions)">
       <summary>Loads an <see cref="T:System.Xml.Linq.XElement" /> from a file located in the application's XAP package, optionally preserving white space, setting the base URI, and retaining line information.</summary>
       <returns>An <see cref="T:System.Xml.Linq.XElement" /> that contains the contents of the specified file.</returns>
-      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XElement" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML File from an Arbitrary URI Location with LINQ to XML.</param>
+      <param name="uri">A URI string that references the file to be loaded into a new <see cref="T:System.Xml.Linq.XElement" />. This file is located in the application's XAP package. If you want to download a file from some other location, follow the steps described in How to: Load an XML file from an Arbitrary URI Location with LINQ to XML.</param>
       <param name="options">A <see cref="T:System.Xml.Linq.LoadOptions" /> that specifies white space behavior, and whether to load base URI and line information.</param>
     </member>
     <member name="M:System.Xml.Linq.XElement.Load(System.Xml.XmlReader)">
@@ -1280,7 +1280,11 @@
       <summary>Creates an <see cref="T:System.Xml.XmlReader" /> for this node.</summary>
       <returns>An <see cref="T:System.Xml.XmlReader" /> that can be used to read this node and its descendants.</returns>
     </member>
-    <member name="M:System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)"></member>
+    <member name="M:System.Xml.Linq.XNode.CreateReader(System.Xml.Linq.ReaderOptions)">
+      <summary>Creates an <see cref="T:System.Xml.XmlReader" /> for this node.</summary>
+      <returns>An <see cref="T:System.Xml.XmlReader" /> that can be used to read this node and its descendants.</returns>
+      <param name="readerOptions">Specifies whether to omit duplicate namespaces.</param>
+    </member>
     <member name="M:System.Xml.Linq.XNode.DeepEquals(System.Xml.Linq.XNode,System.Xml.Linq.XNode)">
       <summary>Compares the values of two nodes, including the values of all descendant nodes.</summary>
       <returns>true if the nodes are equal; otherwise false.</returns>
@@ -1627,6 +1631,25 @@
     <member name="M:System.Xml.Linq.XText.WriteTo(System.Xml.XmlWriter)">
       <summary>Writes this node to an <see cref="T:System.Xml.XmlWriter" />.</summary>
       <param name="writer">An <see cref="T:System.Xml.XmlWriter" /> into which this method will write.</param>
+    </member>
+    <member name="M:System.Xml.Linq.XNodeDocumentOrderComparer.System#Collections#IComparer#Compare(System.Object,System.Object)">
+      <summary>Compares two nodes to determine their relative document order.</summary>
+      <returns>An <see cref="T:System.Int32" /> that contains 0 if the nodes are equal; -1 if <paramref name="x" /> is before <paramref name="y" />; 1 if <paramref name="x" /> is after <paramref name="y" />.</returns>
+      <param name="x">The first <see cref="T:System.Xml.Linq.XNode" /> to compare.</param>
+      <param name="y">The second <see cref="T:System.Xml.Linq.XNode" /> to compare.</param>
+      <exception cref="T:System.InvalidOperationException">The two nodes do not share a common ancestor.</exception>
+      <exception cref="T:System.ArgumentException">The two nodes are not derived from <see cref="T:System.Xml.Linq.XNode" />.</exception>
+    </member>
+    <member name="M:System.Xml.Linq.XNodeEqualityComparer.System#Collections#IEqualityComparer#Equals(System.Object,System.Object)">
+      <summary>Compares the values of two nodes.</summary>
+      <returns>true if the nodes are equal; otherwise false.</returns>
+      <param name="x">The first <see cref="T:System.Xml.Linq.XNode" /> to compare.</param>
+      <param name="y">The second <see cref="T:System.Xml.Linq.XNode" /> to compare.</param>
+    </member>
+    <member name="M:System.Xml.Linq.XNodeEqualityComparer.System#Collections#IEqualityComparer#GetHashCode(System.Object)">
+      <summary>Returns a hash code based on the value of a node.</summary>
+      <returns>A <see cref="T:System.Int32" /> that contains a value-based hash code for the node.</returns>
+      <param name="obj">The node to hash.</param>
     </member>
   </members>
 </doc>

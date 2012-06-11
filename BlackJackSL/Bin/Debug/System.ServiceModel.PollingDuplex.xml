@@ -4,125 +4,32 @@
     <name>System.ServiceModel.PollingDuplex</name>
   </assembly>
   <members>
-    <member name="T:System.ServiceModel.DuplexChannelFactory`1">
-      <summary>Provides the means to create and manage duplex channels of different types that are used by clients to send and receive messages to and from service endpoints.</summary>
-      <typeparam name="TChannel">The type of channel produced by the channel factory.</typeparam>
-    </member>
-    <member name="M:System.ServiceModel.DuplexChannelFactory`1.#ctor(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Binding)">
-      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.DuplexChannelFactory`1" /> class with a context that implements the callback contract and a specified binding.</summary>
-      <param name="callbackInstance">The <see cref="T:System.ServiceModel.InstanceContext" /> that the client uses to listen for messages from the connected service.</param>
-      <param name="binding">The <see cref="T:System.ServiceModel.Channels.Binding" /> used to connect to the service by channels produced by the factory.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="callbackInstance" /> or <paramref name="binding" /> is null.</exception>
-    </member>
-    <member name="M:System.ServiceModel.DuplexChannelFactory`1.#ctor(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)">
-      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.DuplexChannelFactory`1" /> class with an object that implements the callback contract and a specified binding and endpoint address.</summary>
-      <param name="callbackInstance">The <see cref="T:System.ServiceModel.InstanceContext" /> that the client uses to listen for messages from the connected service.</param>
-      <param name="binding">The <see cref="T:System.ServiceModel.Channels.Binding" /> used to connect to the service by channels produced by the factory.</param>
-      <param name="remoteAddress">The <see cref="T:System.ServiceModel.EndpointAddress" /> that provides the location of the service.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="callbackInstance" />, <paramref name="binding" />, or <paramref name="remoteAddress" /> is null.</exception>
-    </member>
-    <member name="M:System.ServiceModel.DuplexChannelFactory`1.#ctor(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Binding,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.DuplexChannelFactory`1" /> class with the specified instance context, binding, and remote address.</summary>
-      <param name="callbackInstance">The <see cref="T:System.ServiceModel.InstanceContext" /> that the client uses to listen for messages from the connected service.</param>
-      <param name="binding">The <see cref="T:System.ServiceModel.Channels.Binding" /> used to connect to the service by channels produced by the factory.</param>
-      <param name="remoteAddress">The remote address that provides the location of the service.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="callbackInstance" />, <paramref name="binding" />, or <paramref name="remoteAddress" /> is null.</exception>
-    </member>
-    <member name="M:System.ServiceModel.DuplexChannelFactory`1.CreateChannel(System.ServiceModel.EndpointAddress,System.Uri)">
-      <summary>Creates a duplex channel between a service and a callback instance on the client.</summary>
-      <returns>A duplex channel of type <paramref name="TChannel" />, the generic parameter for the factory, between the client and service.</returns>
-      <param name="address">The <see cref="T:System.ServiceModel.EndpointAddress" /> that provides the location of the service.</param>
-      <param name="via">The <see cref="T:System.Uri" /> that contains the transport address to which the message is sent.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="address" /> is null.</exception>
-    </member>
-    <member name="M:System.ServiceModel.DuplexChannelFactory`1.CreateChannel(System.ServiceModel.InstanceContext)">
-      <summary>Creates a duplex channel between a service and a callback instance on the client.</summary>
-      <returns>A duplex channel of type <paramref name="TChannel" />, the generic parameter for the factory, between the client and service.</returns>
-      <param name="callbackInstance">The <see cref="T:System.ServiceModel.InstanceContext" /> that the client uses to listen for messages from the connected service.</param>
-      <exception cref="T:System.InvalidOperationException">
-        <paramref name="callbackInstance" /> or <paramref name="callbackInstance" /> UserObject is null.</exception>
-    </member>
-    <member name="M:System.ServiceModel.DuplexChannelFactory`1.CreateChannel(System.ServiceModel.InstanceContext,System.ServiceModel.EndpointAddress)">
-      <summary>Creates a duplex channel between a service and a callback instance on the client.</summary>
-      <returns>A duplex channel of type <paramref name="TChannel" />, the generic parameter for the factory, between the client and service.</returns>
-      <param name="callbackInstance">The <see cref="T:System.ServiceModel.InstanceContext" /> that the client uses to listen for messages from the connected service.</param>
-      <param name="address">The <see cref="T:System.ServiceModel.EndpointAddress" /> that provides the location of the service.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="address" /> is null.</exception>
-      <exception cref="T:System.InvalidOperationException">
-        <paramref name="callbackInstance" /> or <paramref name="callbackInstance" />.UserObject is null.</exception>
-    </member>
-    <member name="M:System.ServiceModel.DuplexChannelFactory`1.CreateChannel(System.ServiceModel.InstanceContext,System.ServiceModel.EndpointAddress,System.Uri)">
-      <summary>Creates a duplex channel between a service and a callback instance on the client.</summary>
-      <returns>A channel of type <paramref name="TChannel" />, the generic parameter for the factory, between the client and service.</returns>
-      <param name="callbackInstance">The <see cref="T:System.ServiceModel.InstanceContext" /> that the client uses to listen for messages from the connected service.</param>
-      <param name="address">The <see cref="T:System.ServiceModel.EndpointAddress" /> that provides the location of the service.</param>
-      <param name="via">The <see cref="T:System.Uri" /> that contains the transport address to which the message is sent.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="address" /> is null.</exception>
-      <exception cref="T:System.InvalidOperationException">
-        <paramref name="callbackInstance" /> or <paramref name="callbackInstance" />.UserObject is null.</exception>
-    </member>
-    <member name="T:System.ServiceModel.DuplexClientBase`1">
-      <summary>Provides the base implementation from which Silverlight version 3 client objects can call duplex services.</summary>
-      <typeparam name="TChannel">The type of the channel to be created.</typeparam>
-    </member>
-    <member name="M:System.ServiceModel.DuplexClientBase`1.#ctor(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)">
-      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.DuplexClientBase`1" /> class using the specified callback object, binding, and service endpoint address.</summary>
-      <param name="callbackInstance">An <see cref="T:System.ServiceModel.InstanceContext" /> object that associates the callback object with the channel to the service.</param>
-      <param name="binding">The binding with which to call the service.</param>
-      <param name="remoteAddress">The service endpoint address to use.</param>
-      <exception cref="T:System.ArgumentNullException">The callback instance is null.</exception>
-      <exception cref="T:System.ArgumentNullException">The binding is null.</exception>
-      <exception cref="T:System.ArgumentNullException">The address is null.</exception>
-    </member>
-    <member name="M:System.ServiceModel.DuplexClientBase`1.CreateChannel">
-      <summary>Returns a channel to the service associated with the callback object passed to the constructor.</summary>
-      <returns>A channel to the service of the type of the service contract interface.</returns>
-    </member>
-    <member name="T:System.ServiceModel.InstanceContext">
-      <summary>Represents the context information for a service instance.</summary>
-    </member>
-    <member name="M:System.ServiceModel.InstanceContext.#ctor(System.Object)">
-      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.InstanceContext" /> class for a specified object that implements the service instance.</summary>
-      <param name="implementation">The object that implements the serviceinstance.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="implementation" /> is null.</exception>
-    </member>
-    <member name="M:System.ServiceModel.InstanceContext.GetServiceInstance(System.ServiceModel.Channels.Message)">
-      <summary>Returns the instance of the service for the instance context in response to an incoming message.</summary>
-      <returns>The object that represents the service instance.</returns>
-      <param name="message">The incoming message that triggered the creation of a service object.</param>
-      <exception cref="T:System.InvalidOperationException">The service instance is in a created or opening state or is not initialized.</exception>
-      <exception cref="T:System.ServiceModel.CommunicationObjectAbortedException">The service instance is aborted.</exception>
-      <exception cref="T:System.ObjectDisposedException">The service instance has been closed already and cannot be modified in these states.</exception>
-      <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">The service instance is faulted and cannot be modified in these states.</exception>
-    </member>
-    <member name="P:System.ServiceModel.InstanceContext.SynchronizationContext">
-      <summary>Gets or sets the context used for thread synchronization with the current instance context.</summary>
-      <returns>The <see cref="T:System.Threading.SynchronizationContext" /> used for thread synchronization with the current instance context.</returns>
-      <exception cref="T:System.InvalidOperationException">The communication object is opened or closing and cannot be modified in these states.</exception>
-      <exception cref="T:System.ServiceModel.CommunicationObjectAbortedException">The communication object has been aborted and cannot be modified in these states.</exception>
-      <exception cref="T:System.ObjectDisposedException">The communication object has been closed already and cannot be modified in these states.</exception>
-      <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">The communication object is faulted and cannot be modified in these states.</exception>
-    </member>
     <member name="T:System.ServiceModel.PollingDuplexHttpBinding">
-      <summary>Represents a binding that a Silverlight version 3 client can use to configure endpoints that can communicate with Windows Communication Foundation (WCF) services that are similarly configured for duplex communication with a polling client.</summary>
+      <summary>Represents a binding that a Silverlight 5 client can use to configure endpoints that can communicate with Windows Communication Foundation (WCF) services that are similarly configured for duplex communication with a polling client.</summary>
     </member>
     <member name="M:System.ServiceModel.PollingDuplexHttpBinding.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.PollingDuplexHttpBinding" /> class.</summary>
+    </member>
+    <member name="M:System.ServiceModel.PollingDuplexHttpBinding.#ctor(System.ServiceModel.Channels.PollingDuplexMode)">
+      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.PollingDuplexHttpBinding" /> class with a specified mode of behavior on the server in response to client polling.</summary>
+      <param name="duplexMode">The mode of behavior exhibited on a server in response to client polling when the communication between them is configured for duplex polling.</param>
     </member>
     <member name="M:System.ServiceModel.PollingDuplexHttpBinding.#ctor(System.ServiceModel.PollingDuplexHttpSecurityMode)">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.PollingDuplexHttpBinding" /> class with a specified type of security used by the binding.</summary>
       <param name="securityMode">The value of <see cref="T:System.ServiceModel.PollingDuplexHttpSecurityMode" /> that specifies the type of security that is used with the SOAP message and for the client.</param>
     </member>
+    <member name="M:System.ServiceModel.PollingDuplexHttpBinding.#ctor(System.ServiceModel.PollingDuplexHttpSecurityMode,System.ServiceModel.Channels.PollingDuplexMode)">
+      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.PollingDuplexHttpBinding" /> class with a specified type of security and a specified mode of behavior on the server in the way it responses to client polling.</summary>
+      <param name="securityMode">The value of <see cref="T:System.ServiceModel.PollingDuplexHttpSecurityMode" /> that specifies the type of security that is used with the SOAP message and for the client.</param>
+      <param name="duplexMode">The mode of behavior exhibited on a server in response to client polling when the communication between them is configured for duplex polling.</param>
+    </member>
     <member name="M:System.ServiceModel.PollingDuplexHttpBinding.CreateBindingElements">
       <summary>Returns an ordered collection of binding elements contained in the current binding.</summary>
       <returns>The <see cref="T:System.ServiceModel.Channels.BindingElementCollection" /> that contains the ordered stack of binding elements described by the <see cref="T:System.PollingDuplexHttpBinding.BasicHttpBinding" />.</returns>
+    </member>
+    <member name="P:System.ServiceModel.PollingDuplexHttpBinding.DuplexMode">
+      <summary>Gets or sets a value that specifies how the server behaves in response to client polling when the communication is configured for duplex polling.</summary>
+      <returns>A <see cref="T:System.ServiceModel.Channels.PollingDuplexMode" /> object whose value indicates how the server behaves in response to client polling when the communication is configured for duplex. The default value is <see cref="F:System.ServiceModel.Channels.PollingDuplexMode.SingleMessagesPerPoll" />.</returns>
     </member>
     <member name="P:System.ServiceModel.PollingDuplexHttpBinding.EnvelopeVersion">
       <summary>Gets the version of SOAP that is used for messages that are processed by this binding.</summary>
@@ -176,21 +83,24 @@
       <summary>Security is provided using HTTPS. The service must be configured with SSL certificates. The SOAP message is protected as a whole using HTTPS. The service is authenticated by the client using the service’s SSL certificate.</summary>
     </member>
     <member name="F:System.ServiceModel.PollingDuplexHttpSecurityMode.TransportWithMessageCredential">
-      <summary>This mode provides integrity, confidentiality, and server authentication using HTTPS. The service must be configured with a certificate. Client authentication is provided by SOAP message security.
-This mode is applicable when the user is authenticating with a UserName or Certificate credential and there is an existing HTTPS deployment for securing message transfer.</summary>
+      <summary>This mode provides integrity, confidentiality, and server authentication using HTTPS. The service must be configured with a certificate. Client authentication is provided by SOAP message security.This mode is applicable when the user is authenticating with a UserName or Certificate credential and there is an existing HTTPS deployment for securing message transfer.</summary>
     </member>
     <member name="F:System.ServiceModel.PollingDuplexHttpSecurityMode.TransportCredentialOnly">
       <summary>This mode provides only HTTP-based client authentication. It does not provide message integrity or confidentiality.</summary>
     </member>
     <member name="T:System.ServiceModel.Channels.PollingDuplexBindingElement">
-      <summary>Represents the binding element that enables duplex communication between a Silverlight version 3 client and a service.</summary>
+      <summary>Represents the binding element that enables duplex communication between a Silverlight 5 client and a service.</summary>
     </member>
     <member name="M:System.ServiceModel.Channels.PollingDuplexBindingElement.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Channels.PollingDuplexBindingElement" /> class.</summary>
     </member>
     <member name="M:System.ServiceModel.Channels.PollingDuplexBindingElement.#ctor(System.ServiceModel.Channels.PollingDuplexBindingElement)">
-      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Channels.PollingDuplexBindingElement" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Channels.PollingDuplexBindingElement" /> class from an existing one.</summary>
       <param name="elementToBeCloned"> The instance of the <see cref="T:System.ServiceModel.Channels.PollingDuplexBindingElement" /> class to be cloned.</param>
+    </member>
+    <member name="M:System.ServiceModel.Channels.PollingDuplexBindingElement.#ctor(System.ServiceModel.Channels.PollingDuplexMode)">
+      <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Channels.PollingDuplexBindingElement" /> class with a specified polling duplex mode.</summary>
+      <param name="duplexMode">A <see cref="T:System.ServiceModel.Channels.PollingDuplexMode" /> object that specifies how the server behaves in response to client polling when the communication is configured for duplex polling.</param>
     </member>
     <member name="M:System.ServiceModel.Channels.PollingDuplexBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)">
       <summary>Creates a channel factory that can be used to create a channel.</summary>
@@ -217,6 +127,10 @@ This mode is applicable when the user is authenticating with a UserName or Certi
       <summary>Creates a copy of the current binding element.</summary>
       <returns>A copy of the current binding element.</returns>
     </member>
+    <member name="P:System.ServiceModel.Channels.PollingDuplexBindingElement.DuplexMode">
+      <summary>Gets or sets a value that specifies how the server behaves in response to client polling when the communication is configured for duplex polling.</summary>
+      <returns>A <see cref="T:System.ServiceModel.Channels.PollingDuplexMode" /> object whose value indicates how the server behaves in response to client polling when the communication is configured for duplex. The default value is <see cref="F:System.ServiceModel.Channels.PollingDuplexMode.SingleMessagesPerPoll" />.</returns>
+    </member>
     <member name="M:System.ServiceModel.Channels.PollingDuplexBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)">
       <summary>Gets a property from the specified <see cref="T:System.ServiceModel.Channels.BindingContext" />.</summary>
       <returns>The property from the specified <see cref="T:System.ServiceModel.Channels.BindingContext" />.</returns>
@@ -226,6 +140,20 @@ This mode is applicable when the user is authenticating with a UserName or Certi
     <member name="P:System.ServiceModel.Channels.PollingDuplexBindingElement.InactivityTimeout">
       <summary>Gets or sets the maximum interval of time that can pass without activity on a channel before the client channel enters a faulted state.</summary>
       <returns>The <see cref="T:System.TimeSpan" /> object that specifies the maximum interval of time that can pass without activity on a channel before the client channel enters a faulted state.</returns>
+    </member>
+    <member name="P:System.ServiceModel.Channels.PollingDuplexBindingElement.MaxPendingMessagesPerSession">
+      <summary>Gets or sets the maximum number of pending messages per session.</summary>
+      <returns>The maximum number of pending messages per session.</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">The value set is less than zero.</exception>
+    </member>
+    <member name="T:System.ServiceModel.Channels.PollingDuplexMode">
+      <summary>Specifies the format of server responses to client polling when the communication is configured for duplex polling.</summary>
+    </member>
+    <member name="F:System.ServiceModel.Channels.PollingDuplexMode.SingleMessagePerPoll">
+      <summary>Specifies the server will return one message every time the client polls for a message and then close the polling connection. This is the default value.</summary>
+    </member>
+    <member name="F:System.ServiceModel.Channels.PollingDuplexMode.MultipleMessagesPerPoll">
+      <summary>Specifies the server keeps the connection open for as long there are messages ready to be sent back to the client and sends as many messages back to the client as it can over a chunked HTTP response.</summary>
     </member>
   </members>
 </doc>

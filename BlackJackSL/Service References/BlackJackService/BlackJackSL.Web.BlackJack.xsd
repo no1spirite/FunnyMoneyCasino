@@ -20,28 +20,9 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="LeaveGameMessageToServer" nillable="true" type="tns:LeaveGameMessageToServer" />
-  <xs:complexType name="StandMessageToServer">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q2="http://samples.microsoft.com/silverlight2/duplex" base="q2:DuplexMessage">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="playerId" type="xs:int" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="StandMessageToServer" nillable="true" type="tns:StandMessageToServer" />
-  <xs:complexType name="StandMessageFromServer">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:StandMessageToServer">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="StandMessageFromServer" nillable="true" type="tns:StandMessageFromServer" />
   <xs:complexType name="HitMessageToServer">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q3="http://samples.microsoft.com/silverlight2/duplex" base="q3:DuplexMessage">
+      <xs:extension xmlns:q2="http://samples.microsoft.com/silverlight2/duplex" base="q2:DuplexMessage">
         <xs:sequence>
           <xs:element minOccurs="0" name="handId" type="xs:int" />
           <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
@@ -61,7 +42,7 @@
   <xs:element name="HitMessageFromServer" nillable="true" type="tns:HitMessageFromServer" />
   <xs:complexType name="DoubleMessageToServer">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q4="http://samples.microsoft.com/silverlight2/duplex" base="q4:DuplexMessage">
+      <xs:extension xmlns:q3="http://samples.microsoft.com/silverlight2/duplex" base="q3:DuplexMessage">
         <xs:sequence>
           <xs:element minOccurs="0" name="handId" type="xs:int" />
           <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
@@ -81,7 +62,7 @@
   <xs:element name="DoubleMessageFromServer" nillable="true" type="tns:DoubleMessageFromServer" />
   <xs:complexType name="SplitMessageToServer">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q5="http://samples.microsoft.com/silverlight2/duplex" base="q5:DuplexMessage">
+      <xs:extension xmlns:q4="http://samples.microsoft.com/silverlight2/duplex" base="q4:DuplexMessage">
         <xs:sequence>
           <xs:element minOccurs="0" name="handId" type="xs:int" />
           <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
@@ -109,7 +90,7 @@
   <xs:element name="ClearPlayersMessageFromServer" nillable="true" type="tns:ClearPlayersMessageFromServer" />
   <xs:complexType name="JoinGameMessageToServer">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q6="http://samples.microsoft.com/silverlight2/duplex" base="q6:DuplexMessage">
+      <xs:extension xmlns:q5="http://samples.microsoft.com/silverlight2/duplex" base="q5:DuplexMessage">
         <xs:sequence>
           <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="playerId" type="xs:int" />
@@ -120,7 +101,7 @@
   <xs:element name="JoinGameMessageToServer" nillable="true" type="tns:JoinGameMessageToServer" />
   <xs:complexType name="FinishedDealingMessageToServer">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q7="http://samples.microsoft.com/silverlight2/duplex" base="q7:DuplexMessage">
+      <xs:extension xmlns:q6="http://samples.microsoft.com/silverlight2/duplex" base="q6:DuplexMessage">
         <xs:sequence>
           <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
         </xs:sequence>
@@ -136,16 +117,14 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="FinishedDealingMessageFromServer" nillable="true" type="tns:FinishedDealingMessageFromServer" />
-  <xs:complexType name="JoinGameMessageFromServer">
+  <xs:complexType name="ClearDealerMessageFromServer">
     <xs:complexContent mixed="false">
-      <xs:extension base="tns:JoinGameMessageToServer">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="xmlDoc" nillable="true" type="xs:string" />
-        </xs:sequence>
+      <xs:extension xmlns:q7="http://samples.microsoft.com/silverlight2/duplex" base="q7:DuplexMessage">
+        <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="JoinGameMessageFromServer" nillable="true" type="tns:JoinGameMessageFromServer" />
+  <xs:element name="ClearDealerMessageFromServer" nillable="true" type="tns:ClearDealerMessageFromServer" />
   <xs:complexType name="PlayerAlreadyExistsMessageFromServer">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q8="http://samples.microsoft.com/silverlight2/duplex" base="q8:DuplexMessage">
@@ -154,28 +133,9 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="PlayerAlreadyExistsMessageFromServer" nillable="true" type="tns:PlayerAlreadyExistsMessageFromServer" />
-  <xs:complexType name="RemovePlayerMessageToServer">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q9="http://samples.microsoft.com/silverlight2/duplex" base="q9:DuplexMessage">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="playerId" type="xs:int" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="RemovePlayerMessageToServer" nillable="true" type="tns:RemovePlayerMessageToServer" />
-  <xs:complexType name="RemovePlayerMessageFromServer">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:JoinGameMessageToServer">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="RemovePlayerMessageFromServer" nillable="true" type="tns:RemovePlayerMessageFromServer" />
   <xs:complexType name="BetMessageToServer">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q10="http://samples.microsoft.com/silverlight2/duplex" base="q10:DuplexMessage">
+      <xs:extension xmlns:q9="http://samples.microsoft.com/silverlight2/duplex" base="q9:DuplexMessage">
         <xs:sequence>
           <xs:element minOccurs="0" name="betAmount" type="xs:double" />
           <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
@@ -187,7 +147,7 @@
   <xs:element name="BetMessageToServer" nillable="true" type="tns:BetMessageToServer" />
   <xs:complexType name="AddPlayerMessageToServer">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q11="http://samples.microsoft.com/silverlight2/duplex" base="q11:DuplexMessage">
+      <xs:extension xmlns:q10="http://samples.microsoft.com/silverlight2/duplex" base="q10:DuplexMessage">
         <xs:sequence>
           <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="playerId" type="xs:int" />
@@ -197,6 +157,32 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="AddPlayerMessageToServer" nillable="true" type="tns:AddPlayerMessageToServer" />
+  <xs:complexType name="RemovePlayerMessageFromServer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:JoinGameMessageToServer">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemovePlayerMessageFromServer" nillable="true" type="tns:RemovePlayerMessageFromServer" />
+  <xs:complexType name="BetMessageFromServer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BetMessageToServer">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BetMessageFromServer" nillable="true" type="tns:BetMessageFromServer" />
+  <xs:complexType name="DealMessageToServer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://samples.microsoft.com/silverlight2/duplex" base="q11:DuplexMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DealMessageToServer" nillable="true" type="tns:DealMessageToServer" />
   <xs:complexType name="ClearPlayersMessageToServer">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q12="http://samples.microsoft.com/silverlight2/duplex" base="q12:DuplexMessage">
@@ -215,40 +201,54 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="AddPlayerMessageFromServer" nillable="true" type="tns:AddPlayerMessageFromServer" />
-  <xs:complexType name="ClearDealerMessageFromServer">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q13="http://samples.microsoft.com/silverlight2/duplex" base="q13:DuplexMessage">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="ClearDealerMessageFromServer" nillable="true" type="tns:ClearDealerMessageFromServer" />
-  <xs:complexType name="BetMessageFromServer">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BetMessageToServer">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="BetMessageFromServer" nillable="true" type="tns:BetMessageFromServer" />
-  <xs:complexType name="DealMessageToServer">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q14="http://samples.microsoft.com/silverlight2/duplex" base="q14:DuplexMessage">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="DealMessageToServer" nillable="true" type="tns:DealMessageToServer" />
   <xs:complexType name="DealMessageFromServer">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:DealMessageToServer">
         <xs:sequence>
-          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack.Objects" minOccurs="0" name="deck" nillable="true" type="q15:ArrayOfCardViewModel" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack.Objects" minOccurs="0" name="deck" nillable="true" type="q13:ArrayOfCardViewModel" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="DealMessageFromServer" nillable="true" type="tns:DealMessageFromServer" />
+  <xs:complexType name="StandMessageToServer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://samples.microsoft.com/silverlight2/duplex" base="q14:DuplexMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="playerId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StandMessageToServer" nillable="true" type="tns:StandMessageToServer" />
+  <xs:complexType name="StandMessageFromServer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StandMessageToServer">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StandMessageFromServer" nillable="true" type="tns:StandMessageFromServer" />
+  <xs:complexType name="RemovePlayerMessageToServer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://samples.microsoft.com/silverlight2/duplex" base="q15:DuplexMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="playerId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemovePlayerMessageToServer" nillable="true" type="tns:RemovePlayerMessageToServer" />
+  <xs:complexType name="JoinGameMessageFromServer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:JoinGameMessageToServer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="xmlDoc" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JoinGameMessageFromServer" nillable="true" type="tns:JoinGameMessageFromServer" />
 </xs:schema>
