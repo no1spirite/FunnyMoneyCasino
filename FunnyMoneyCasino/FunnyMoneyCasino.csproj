@@ -13,7 +13,8 @@
     <AssemblyName>FunnyMoneyCasino</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <SilverlightApplicationList>{8D0A03F1-9099-41EC-B9A5-F3A8DD770BF0}|..\BlackJackSL\BlackJackSL.csproj|ClientBin|False</SilverlightApplicationList>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>

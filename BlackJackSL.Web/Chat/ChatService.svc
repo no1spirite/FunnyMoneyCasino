@@ -1,5 +1,0 @@
-﻿<%@ServiceHost
- language="C#"
- Debug="true"
- Factory="BlackJackSL.Web.Chat.ChatServiceFactory"
- Service="BlackJackSL.Web.Chat.ChatService" %>
