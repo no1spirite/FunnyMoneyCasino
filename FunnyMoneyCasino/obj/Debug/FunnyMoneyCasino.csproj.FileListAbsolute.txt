@@ -1,12 +1,5 @@
-G:\Dev\FunnyMoneyCasino\FunnyMoneyCasino\bin\FunnyMoneyCasino.dll
-G:\Dev\FunnyMoneyCasino\FunnyMoneyCasino\bin\FunnyMoneyCasino.pdb
-G:\Dev\FunnyMoneyCasino\FunnyMoneyCasino\obj\Debug\ResolveAssemblyReference.cache
-G:\Dev\FunnyMoneyCasino\FunnyMoneyCasino\obj\Debug\FunnyMoneyCasino.dll
-G:\Dev\FunnyMoneyCasino\FunnyMoneyCasino\obj\Debug\FunnyMoneyCasino.pdb
-G:\Dev\FunnyMoneyCasino\FunnyMoneyCasino\bin\System.Web.Mvc.dll
-G:\Dev\FunnyMoneyCasino\FunnyMoneyCasino\bin\System.Web.Mvc.xml
+C:\Dev\Personal\FunnyMoneyCasino\FunnyMoneyCasino\bin\FunnyMoneyCasino.dll
+C:\Dev\Personal\FunnyMoneyCasino\FunnyMoneyCasino\bin\FunnyMoneyCasino.pdb
 C:\Dev\Personal\FunnyMoneyCasino\FunnyMoneyCasino\obj\Debug\ResolveAssemblyReference.cache
 C:\Dev\Personal\FunnyMoneyCasino\FunnyMoneyCasino\obj\Debug\FunnyMoneyCasino.dll
 C:\Dev\Personal\FunnyMoneyCasino\FunnyMoneyCasino\obj\Debug\FunnyMoneyCasino.pdb
-C:\Dev\Personal\FunnyMoneyCasino\FunnyMoneyCasino\bin\FunnyMoneyCasino.dll
-C:\Dev\Personal\FunnyMoneyCasino\FunnyMoneyCasino\bin\FunnyMoneyCasino.pdb
