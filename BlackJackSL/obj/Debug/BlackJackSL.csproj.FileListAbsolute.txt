@@ -180,15 +180,6 @@ C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\ja\System.Windows.Control
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\ko\System.Windows.Controls.resources.dll
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\de\System.Windows.Interactivity.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\en\System.Windows.Interactivity.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\es\System.Windows.Interactivity.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\fr\System.Windows.Interactivity.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\it\System.Windows.Interactivity.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\ja\System.Windows.Interactivity.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
-C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\de\System.Xml.Linq.resources.dll
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\es\System.Xml.Linq.resources.dll
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\fr\System.Xml.Linq.resources.dll
@@ -269,3 +260,4 @@ C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\uk\System.Windows.Control
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\vi\System.Windows.Controls.resources.dll
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\ru\System.Xml.Linq.resources.dll
 C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\ru\System.Xml.Serialization.resources.dll
+C:\Dev\Personal\FunnyMoneyCasino\BlackJackSL\Bin\Debug\System.Windows.Interactivity.dll

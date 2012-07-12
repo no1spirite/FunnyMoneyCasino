@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BlackJack.Services.Chat" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BlackJack.Services.Chat" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://samples.microsoft.com/silverlight2/duplex" />
+  <xs:complexType name="JoinChatMessage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://samples.microsoft.com/silverlight2/duplex" base="q1:DuplexMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JoinChatMessage" nillable="true" type="tns:JoinChatMessage" />
+  <xs:complexType name="StockTickerMessage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://samples.microsoft.com/silverlight2/duplex" base="q2:DuplexMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Change" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="High" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastTradeTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Low" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Open" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="stock" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockTickerMessage" nillable="true" type="tns:StockTickerMessage" />
+  <xs:complexType name="LeaveChatMessage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://samples.microsoft.com/silverlight2/duplex" base="q3:DuplexMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LeaveChatMessage" nillable="true" type="tns:LeaveChatMessage" />
+  <xs:complexType name="TextChatMessageToServer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://samples.microsoft.com/silverlight2/duplex" base="q4:DuplexMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="textColor" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextChatMessageToServer" nillable="true" type="tns:TextChatMessageToServer" />
+  <xs:complexType name="TextChatMessageFromServer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TextChatMessageToServer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextChatMessageFromServer" nillable="true" type="tns:TextChatMessageFromServer" />
+</xs:schema>

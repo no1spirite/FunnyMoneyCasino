@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Import Namespace="System.Web.Mvc.Html" %>
 <%
     if (Request.IsAuthenticated) {
 %>

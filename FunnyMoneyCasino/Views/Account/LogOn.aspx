@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import Namespace="System.Web.Mvc.Html" %>
 
 <asp:Content ID="loginHead" ContentPlaceHolderID="head" runat="server">
     <title>Log On</title>
