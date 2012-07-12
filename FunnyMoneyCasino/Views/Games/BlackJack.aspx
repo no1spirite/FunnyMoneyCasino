@@ -2,7 +2,7 @@
 
 <asp:Content ID="blackJackHead" ContentPlaceHolderID="head" runat="server">
     <title>BlackJack</title>
-     <script type="text/javascript" src="/FunnyMoneyCasino/Silverlight.js"></script>
+     <script type="text/javascript" src="/Silverlight.js"></script>
     <script type="text/javascript">
         function onSilverlightError(sender, args) {
             var appSource = "";
@@ -55,7 +55,7 @@
 
     <div id="silverlightControlHost" style="height:550px;width:1150px;margin-left:-15px;">
         <object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="100%" height="100%" HorizontalAlign="Right">
-		  <param name="source" value="/FunnyMoneyCasino/ClientBin/BlackJackSL.xap"/>
+		  <param name="source" value="/ClientBin/BlackJackSL.xap"/>
 		  <param name="onError" value="onSilverlightError" />
 		  <param name="background" value="white" />
 		  <param name="minRuntimeVersion" value="3.0.40624.0" />
